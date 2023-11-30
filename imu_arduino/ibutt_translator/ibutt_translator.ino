@@ -81,8 +81,8 @@ void setup() {
   M5.Lcd.println("  Pitch   Roll    Yaw");
   Serial.begin(115200);
   // Keyboard.begin();
-  Keyboard.init();
-  Keyboard.begin(3);
+  // Keyboard.init();
+  // Keyboard.begin(3);
 
 }
 
@@ -155,10 +155,12 @@ void loop() {
     pitching = "flat";
   }
 
-  Serial.printf("Roll: %s\tPitch: %s\tRbutt: %s\tBbutt: %s\n", rolling.c_str(), pitching.c_str(), Astr.c_str(), Bstr.c_str(), prog_pause);
+  // string serprint = "Roll: " + rolling + "\t" + "Pitch: " + pitching + "\t" + "Rbutt: " + Astr + "\t" + "Bbutt: " + Bstr + "\t";
+  // Serial.println(serprint);
+  Serial.printf("Roll: %s\tPitch: %s\tRbutt: %s\tBbutt: %s \n", rolling.c_str(), pitching.c_str(), Astr.c_str(), Bstr.c_str());
 
   // keywrites();
 
-  delay(5);
+  delay(10);
 
 }
